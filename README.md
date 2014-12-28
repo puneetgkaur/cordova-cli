@@ -72,7 +72,7 @@ If you have added extra toolbutton then compile your app using the following com
     cordova build sugar -- noiframe
 
 
-
+Once you are succesfully build the project, you would find the .xo kept in project dir\platforms\sugar\cordova directory which you can copy and paste into sugar-build folder and run the command sugar-install-bundle "project name".xo
 
 
 

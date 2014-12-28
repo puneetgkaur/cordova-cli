@@ -19,6 +19,30 @@
 #
 -->
 
+
+# Instruction to setup the development environment
+
+1. install npm
+
+2. Git clone 3 repos : https://github.com/puneetgkaur/cordova-cli, https://github.com/puneetgkaur/cordova-lib, https://github.com/puneetgkaur/cordova-plugman
+
+3. Run the following commands:
+
+    cd cordova-plugman
+    npm install
+    sudo npm link
+    cd ..
+    cd cordova-lib
+    npm install
+    sudo npm link
+    cd ..
+    cd cordova-cli
+    npm install
+    sudo npm link
+    npm link cordova-lib
+    npm link plugman
+
+
 # commands used to develop a sugar app using cordova
 
 ## creating a project
@@ -48,7 +72,7 @@ If you have added extra toolbutton then compile your app using the following com
     cordova build sugar -- noiframe
 
 
-
+Once you are succesfully build the project, you would find the .xo kept in project dir\platforms\sugar\cordova directory
 
 
 
