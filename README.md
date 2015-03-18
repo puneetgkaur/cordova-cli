@@ -29,18 +29,31 @@
 3. Run the following commands:
 
     cd cordova-plugman
+    
     npm install
+    
     sudo npm link
+    
     cd ..
+    
     cd cordova-lib
+    
     npm install
+    
     sudo npm link
+    
     cd ..
+    
     cd cordova-cli
+    
     npm install
+    
     sudo npm link
+    
     npm link cordova-lib
+    
     npm link plugman
+
 
 
 # commands used to develop a sugar app using cordova
