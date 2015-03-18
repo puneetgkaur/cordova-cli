@@ -28,31 +28,31 @@
 
 3. Run the following commands:
 
-    cd cordova-plugman
+        cd cordova-plugman
     
-    npm install
+        npm install
     
-    sudo npm link
+        sudo npm link
     
-    cd ..
+        cd ..
     
-    cd cordova-lib
+        cd cordova-lib
     
-    npm install
+        npm install
     
-    sudo npm link
+        sudo npm link
     
-    cd ..
+        cd ..
     
-    cd cordova-cli
+        cd cordova-cli
     
-    npm install
+        npm install
     
-    sudo npm link
+        sudo npm link
     
-    npm link cordova-lib
+        npm link cordova-lib
     
-    npm link plugman
+        npm link plugman
 
 
 
