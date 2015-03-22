@@ -24,7 +24,7 @@
 
 1. install npm
 
-2. Git clone 3 repos : https://github.com/puneetgkaur/cordova-cli, https://github.com/puneetgkaur/cordova-lib, https://github.com/puneetgkaur/cordova-plugman
+2. Git clone 3 repos : https://github.com/puneetgkaur/cordova-cli, https://github.com/puneetgkaur/cordova-lib, https://github.com/puneetgkaur/cordova-plugman into a directory
 
 3. Run the following commands:
 
@@ -50,9 +50,9 @@
     
         sudo npm link
     
-        npm link cordova-lib
+        npm link ../cordova-lib/cordova-lib cordova-lib
     
-        npm link plugman
+        npm link ../cordova-plugman/ plugman
 
 
 
