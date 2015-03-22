@@ -106,6 +106,7 @@ Check out the [Getting Started guides](http://cordova.apache.org/docs/en/edge/) 
 - Ubuntu
 - Windows Phone 8
 - Windows 8
+- Sugar
 
 # Requirements
 
@@ -123,46 +124,6 @@ Check out the [Getting Started guides](http://cordova.apache.org/docs/en/edge/) 
 `cordova-cli` has been tested on **Mac OS X**, **Linux**, **Windows 7**, and **Windows 8**.
 
 Please note that some platforms have OS restrictions.  For example, you cannot build for Windows 8 or Windows Phone 8 on Mac OS X, nor can you build for iOS on Windows.
-
-# Install
-
-Ubuntu packages are available in a PPA for Ubuntu 13.10 (Saucy) (the current release) as well as 14.04 (Trusty) (under development).
-
-    sudo apt-add-repository ppa:cordova-ubuntu/ppa
-    sudo apt-get update
-    sudo apt-get install cordova-cli
-    npm install -g cordova
-
-To build an application for the Ubuntu platform, the following extra packages are required:
-
-    sudo apt-get install cmake debhelper libx11-dev libicu-dev pkg-config qtbase5-dev qtchooser qtdeclarative5-dev qtfeedback5-dev qtlocation5-dev qtmultimedia5-dev qtpim5-dev qtsensors5-dev qtsystems5-dev
-
-
-## Installing from master
-
-You'll need to install both [CLI](https://git-wip-us.apache.org/repos/asf/cordova-cli.git) and [Plugman](https://git-wip-us.apache.org/repos/asf/cordova-plugman.git) from `git`. Running the *npm version* of one and *(git) master version* of the other is likely to end with you suffering.
-
-To avoid using sudo, see [Get away from sudo: npm without root](http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears).
-
-Run the following commands:
-
-    git clone https://git-wip-us.apache.org/repos/asf/cordova-plugman.git
-    cd cordova-plugman
-    npm install
-    sudo npm link
-    cd ..
-    git clone https://git-wip-us.apache.org/repos/asf/cordova-cli.git
-    cd cordova-cli
-    npm install
-    sudo npm link
-    npm link plugman
-
-Now the `cordova` and `plugman` in your path are the local git versions. Don't forget to keep them up to date!
-
-## Installing on Ubuntu
-
-    apt-get install cordova-cli
-
 
 # Getting Started
 
@@ -350,44 +311,3 @@ When trying to add a platform on a Windows machine if you run into the following
     at ChildProcess.errorhandler (child_process.js:649:5)
     at ChildProcess.EventEmitter.emit (events.js:95:17)
     at Process.ChildProcess._handle.onexit (child_process.js:787:12)
-
-run the command `android list target`.  If you see:
-
-    'xcopy' is not recognized as an internal or external command,
-    operable program or batch file.
-
-at the beginning of the command output, it means you will need to fix your Windows Path variable to include xcopy. This location is typically under C:\Windows\System32.
-
-## Windows 8
-
-Windows 8 support does not include the ability to launch/run/emulate, so you will need to open **Visual Studio** to see your app live.  You are still able to use the following commands with windows8:
-
-- `platform add windows8`
-- `platform remove windows8`
-- `prepare windows8`
-- `compile windows8`
-- `build windows8`
-
-To run your app, you will need to open the `.sln` in the `platforms/windows8` folder using **Visual Studio 2012**.
-
-**Visual Studio** will tell you to reload the project if you run any of the above commands while the project is loaded.
-
-## Amazon Fire OS
-
-Amazon Fire OS does not include the ability to emulate. You are still able to use the following commands with Amazon Fire OS
-
-- `platform add amazon-fireos`
-- `platform remove amazon-fireos`
-- `prepare amazon-fireos`
-- `compile amazon-fireos`
-- `build amazon-fireos`
-
-## Ubuntu
-
-The initial release of cordova-ubuntu does not support building applications for armhf devices automatically. It is possible to produce applications and click packages in a few steps though.
-
-This bug report documents the issue and solutions for it: https://bugs.launchpad.net/ubuntu/+source/cordova-ubuntu/+bug/1260500 A future release will let developers cross-compile armhf click packages directly from an x86 desktop.
-
-## Firefox OS
-
-Firefox OS does not include the ability to emulate, run and serve. After building, you will have to open the firefoxos platform directory of your app in the App Manager that comes with every firefox browser. 
